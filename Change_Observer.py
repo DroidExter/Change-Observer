@@ -96,7 +96,6 @@ def resource_path(relative_path):
 
 if __name__ == '__main__':
     changeObserver = ChangeObserver()
-
     print("---CHANGE OBSERVER---")
 
     # check delay
@@ -121,11 +120,8 @@ if __name__ == '__main__':
 
     # screenshots saving
     _in = input("SAVE CHANGE SCREENSHOTS? (0 = no, 1 = yes): ")
-
     if _in == '1':
         changeObserver.save = True
-    del _in
-
     if changeObserver.save:
         changeObserver.screenShotfolder = input("SAVE TO FOLDER (FOLDER NAME): ")
         try:
@@ -135,7 +131,6 @@ if __name__ == '__main__':
 
     changeObserver.captureCoords()
 
-    
     while True:
         changeObserver.check()
         sleep(checkDelay)
